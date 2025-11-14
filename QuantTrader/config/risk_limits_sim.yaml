@@ -1,0 +1,28 @@
+global:
+  starting_equity: 50000
+  fast: 10
+  slow: 30
+  rsi_long_thresh: 45
+  rsi_short_thresh: 55
+  qty: 5000
+  limits:
+    # Wide limits for simulation/data gating only.
+    max_position_notional: 10000000
+    max_gross_leverage: 1000.0
+    max_daily_loss: 5000
+    max_drawdown: 0.1
+strategies:
+  sma_atr:
+    starting_equity: 30000
+    limits:
+      max_position_notional: 80000
+      max_gross_leverage: 1.5
+      max_daily_loss: 3000
+      max_drawdown: 0.08
+  bollinger:
+    starting_equity: 20000
+    limits:
+      max_position_notional: 60000
+      max_gross_leverage: 1.2
+      max_daily_loss: 2000
+      max_drawdown: 0.05

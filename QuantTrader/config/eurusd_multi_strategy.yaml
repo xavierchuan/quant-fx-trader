@@ -1,0 +1,33 @@
+symbol: EURUSD
+csv: QuantResearch/data/raw/EURUSD_H1.csv
+cash: 100000
+qty: 10000
+account_ccy: USD
+fast: 20
+slow: 80
+spread: 2.0
+slip: 0.3
+comm: 0.25
+atr_sl: 1.5
+atr_tp: 3.0
+atr_window: 14
+risk_per_trade_pct: 0.01
+max_drawdown_pct: 0.05
+allow_short: true
+strategies:
+  - name: ma_crossover
+    weight: 0.6
+    params:
+      size_mult: 1.0
+      cooldown_bars: 6
+      exit_buffer_pct: 0.0005
+      allow_short: true
+  - name: momentum_breakout
+    weight: 0.4
+    params:
+      lookback: 24
+      enter_threshold: 0.0015
+      exit_threshold: 0.0006
+      size_mult: 0.8
+      allow_short: true
+      cooldown_bars: 12

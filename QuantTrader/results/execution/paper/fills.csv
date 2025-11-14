@@ -1,0 +1,3 @@
+order_id,ts,symbol,pnl,adapter_latency_ms,direction,price,quantity
+PAPER-1,2025-11-12T09:00:00Z,EURUSD,40.0,20,BUY,1.1593,10000
+PAPER-2,2025-11-12T10:00:00Z,EURUSD,-10.0,18,SELL,1.1591,8000

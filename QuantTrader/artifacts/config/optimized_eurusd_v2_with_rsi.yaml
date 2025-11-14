@@ -1,0 +1,27 @@
+symbol: EURUSD
+csv: data/raw/EURUSD_H1.csv
+cash: 100000.0
+qty: 10000
+account_ccy: USD
+fast: 20
+slow: 150
+spread: 1.0
+slip: 0.2
+comm: 2.0
+atr_sl: 2.0
+atr_tp: 4.0
+atr_window: 21
+slope_lookback: 5
+cooldown: 24
+allow_short: true
+long_only_above_slow: false
+short_only_below_slow: false
+risk_per_trade_pct: 0.01
+max_drawdown_pct: 0.05
+# RSI and trailing
+rsi_period: 14
+rsi_long_thresh: 55
+rsi_short_thresh: 45
+enable_trailing: true
+trailing_enable_atr_mult: 1.0
+trailing_atr_mult: 0.5

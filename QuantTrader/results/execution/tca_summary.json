@@ -1,0 +1,14 @@
+{
+  "paper_path": "/Users/chuan/Documents/Projects/FX_Backtest/QuantTrader/results/execution/paper/fills.csv",
+  "live_path": "/Users/chuan/Documents/Projects/FX_Backtest/QuantTrader/results/execution/live/fills.csv",
+  "paper_trade_count": 2,
+  "paper_total_pnl": 30.0,
+  "paper_avg_pnl": 15.0,
+  "paper_avg_latency_ms": 19.0,
+  "live_trade_count": 2,
+  "live_total_pnl": 27.3,
+  "live_avg_pnl": 13.65,
+  "live_avg_latency_ms": 29.0,
+  "pnl_diff_mean": -1.3499999999999996,
+  "pnl_diff_std": 3.8499999999999996
+}

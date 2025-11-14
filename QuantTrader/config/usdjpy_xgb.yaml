@@ -1,0 +1,38 @@
+symbol: USDJPY
+csv: QuantResearch/data/raw/USDJPY_H1_full.csv
+
+# Trading capital and unit size
+cash: 100000.0
+qty: 10000
+account_ccy: USD
+
+# Cost assumptions (aligned with training defaults)
+spread: 2.0
+slip: 0.3
+comm: 0.25
+
+# Core engine params (still used for indicators and safety exits)
+fast: 20
+slow: 80
+atr_sl: 1.5
+atr_tp: 3.0
+atr_window: 14
+regime_ema_window: 200
+cooldown: 0
+
+# Risk controls
+risk_per_trade_pct: 0.01
+max_drawdown_pct: 0.03
+allow_short: false
+
+# Single-model (long-only) strategy
+strategies:
+  - name: xgb_signal
+    weight: 1.0
+    params:
+      # If omitted, strategy will read QuantResearch/artifacts/models/usdjpy_h1_xgb_latest.json
+      # model_dir: QuantResearch/artifacts/models/usdjpy_h1_xgb/20250101_120000
+      prob_long: 0.64
+      prob_exit: 0.50
+      size_mult: 1.0
+      cooldown_bars: 8

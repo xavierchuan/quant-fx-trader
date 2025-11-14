@@ -1,0 +1,77 @@
+symbol: USDJPY
+csv: data/raw/USDJPY_H1.csv
+cash: 100000.0
+qty: 10000
+account_ccy: USD
+fast: 20
+slow: 120
+spread: 1.2
+slip: 0.2
+comm: 2.0
+atr_sl: 1.2
+atr_tp: 3.5
+atr_window: 21
+cooldown: 24
+allow_short: true
+long_only_above_slow: false
+short_only_below_slow: false
+risk_per_trade_pct: 0.01
+max_drawdown_pct: 0.05
+regime_ema_window: 200
+regime_slope_min: 0.0002
+regime_atr_min: 0.0014
+regime_atr_percentile_min: 0.4
+regime_atr_percentile_window: 400
+regime_trend_min_bars: 2
+htf_factor: 4
+htf_ema_window: 60
+htf_rsi_period: 14
+strategies:
+  - name: regime_sma
+    params:
+      trend_params:
+        fast_win: 20
+        slow_win: 120
+        long_only_above_slow: false
+        slope_lookback: 8
+        cooldown: 24
+        atr_sl: 1.2
+        atr_tp: 3.5
+        atr_window: 21
+        allow_short: true
+        short_only_below_slow: false
+        rsi_period: 14
+        rsi_long_thresh: 60
+        rsi_short_thresh: 40
+      range_mode: mean_revert
+      range_rsi_high: 75
+      range_rsi_low: 25
+      trend_min_bars: 2
+      atr_percentile_min: 0.4
+      htf_alignment: true
+      htf_rsi_range: [35, 65]
+      base_size_mult: 1.0
+      size_tiers:
+        - name: strong
+          min_atr_pct: 0.6
+          min_trend_bars: 8
+          size_mult: 1.5
+        - name: base
+          min_atr_pct: 0.45
+          min_trend_strength: 0.00008
+          size_mult: 1.1
+      risk_rules:
+        - type: atr_percentile
+          max: 0.95
+          cooldown_bars: 12
+        - type: calendar
+          dates: ["2024-12-06", "2025-01-10"]
+          cooldown_bars: 24
+  - name: bollinger_mean_revert
+    params:
+      window: 48
+      num_std: 2.0
+      enter_z: 1.4
+      exit_z: 0.2
+      allow_short: false
+      cooldown: 12

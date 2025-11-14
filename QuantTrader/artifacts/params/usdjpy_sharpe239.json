@@ -1,0 +1,27 @@
+{
+  "symbol": "USDJPY",
+  "fast": 20,
+  "slow": 120,
+  "atr_sl": 1.0,
+  "atr_tp": 3.0,
+  "atr_window": 21,
+  "cooldown": 36,
+  "rsi_long_thresh": 60,
+  "rsi_short_thresh": 40,
+  "spread": 1.2,
+  "slip": 0.2,
+  "comm": 2.0,
+  "risk_per_trade_pct": 0.01,
+  "max_drawdown_pct": 0.05,
+  "result_summary": {
+    "sharpe": 2.3922795335924505,
+    "ann_return": 0.003221386151178729,
+    "ann_vol": 0.001346575977407298,
+    "max_drawdown": -0.0008654020935744954,
+    "trades": 188,
+    "expectancy": 2.8389997613201357,
+    "win_rate": 0.3617021276595745,
+    "median_hold": "0 days 07:00:00",
+    "source": "QuantResearch/data/grid/grid_rsi_trailing_diagnostics_USDJPY_grid.csv"
+  }
+}

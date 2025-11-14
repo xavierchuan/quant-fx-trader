@@ -1,0 +1,3 @@
+order_id,ts,symbol,pnl,adapter_latency_ms,direction,price,quantity
+LIVE-1,2025-11-12T09:00:00Z,EURUSD,42.5,30,BUY,1.1593,10000
+LIVE-2,2025-11-12T10:00:00Z,EURUSD,-15.2,28,SELL,1.1591,8000
