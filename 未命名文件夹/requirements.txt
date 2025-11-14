@@ -1,0 +1,12 @@
+# requirements.txt
+
+oandapyV20>=0.7.2
+pandas>=2.0.0
+numpy>=1.23.0
+loguru>=0.7.0
+python-dotenv>=1.0.0
+plotly>=5.0.0
+ta>=0.10.0
+pyyaml>=6.0.0
+streamlit>=1.28.0
+xgboost==1.7.6
